@@ -167,6 +167,7 @@ ul {
 }
 
 .menu-item .link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -209,8 +210,8 @@ ul {
   color: var(--title-text-color);
 }
 
-.contacts-link {
-  display: flex;
+.contacts-item {
+  display: inline-flex;
   align-items: center;
 }
 
@@ -273,6 +274,7 @@ ul {
 /* Advantages section */
 
 .advantages-title {
+  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -281,22 +283,30 @@ ul {
   color: var(--title-text-color);
 }
 
-.advantages-icons-list {
-  margin-bottom: 30px;
-}
-
-.advantages-icons-item {
-  background-color: var(--alt-background-color);
-  width: 270px;
+.advantages-item::before {
+  display: block;
+  content: "";
   height: 120px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--alt-background-color);
 }
 
-.advantages-icons {
-  width: 70px;
-  height: 70px;
-  margin-top: 25px;
-  margin-left: 100px;
-  margin-right: 100px;
+.antenna-icons::before {
+  background-image: url("../images/svg/antenna.svg");
+}
+
+.clock-icons::before {
+  background-image: url("../images/svg/clock.svg");
+}
+
+.diagram-icons::before {
+  background-image: url("../images/svg/diagram.svg");
+}
+
+.astronaut-icons::before {
+  background-image: url("../images/svg/astronaut.svg");
 }
 
 /* What we do section */
